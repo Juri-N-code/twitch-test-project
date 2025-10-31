@@ -1,5 +1,6 @@
 from pages.streamer_page import StreamerPage
 from pages.base_page import BasePage
+from locators.search_results_locators import SearchResultsLocators
 
 
 class SearchResultsPage(BasePage):
@@ -7,7 +8,7 @@ class SearchResultsPage(BasePage):
     Page Object for the search results page
     """
 
-    _LIVE_BUTTON = 'button:has(span:text("Live"))'
+    _LIVE_BUTTON = SearchResultsLocators.LIVE_BUTTON
 
     def select_first_streamer(self) -> "StreamerPage":
         """

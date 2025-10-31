@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 import logging
+from locators.popups_locators import PopupsLocators
 
 logger = logging.getLogger(__name__)
 
@@ -9,11 +10,7 @@ class Popups:
     Class for closing popups
     """
 
-    _POPUPS_SELECTORS = [
-        ".popup-selector",
-        "div[role='dialog']",
-        "button[aria-label='Close']"
-    ]
+    _POPUPS_SELECTORS = PopupsLocators.CANDIDATES
 
     def __init__(self, page: Page) -> None:
         self.page = page

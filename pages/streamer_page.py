@@ -1,10 +1,11 @@
 from pages.base_page import BasePage
+from locators.streamer_locators import StreamerLocators
 
 
 class StreamerPage(BasePage):
     """Page Object for a Twitch streamer's page."""
 
-    _VIDEO_SELECTOR = "video"
+    _VIDEO_SELECTOR = StreamerLocators.VIDEO
 
     def wait_for_video(self) -> "StreamerPage":
         """

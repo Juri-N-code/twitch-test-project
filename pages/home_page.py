@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from pages.search_results_page import SearchResultsPage
 from pages.popups import Popups
+from locators.home_locators import HomeLocators
 
 
 class HomePage(BasePage):
@@ -8,8 +9,8 @@ class HomePage(BasePage):
     Page Object for homepage
     """
 
-    _BROWSE_BUTTON = "text=Browse"
-    _SEARCH_INPUT = "input[placeholder='Search']"
+    _BROWSE_BUTTON = HomeLocators.BROWSE_BUTTON
+    _SEARCH_INPUT = HomeLocators.SEARCH_INPUT
 
     def goto_home(self, url: str) -> "HomePage":
         super().goto(url)
