@@ -5,6 +5,8 @@ from playwright.sync_api import Browser, BrowserContext, Page, Playwright, sync_
 
 from config import settings
 
+TRACE_FILE_NAME = "trace.zip"
+
 
 @pytest.fixture(scope="session")
 def playwright_instance() -> Playwright:
@@ -52,9 +54,9 @@ def context(
     ctx.tracing.start(screenshots=True, snapshots=True, sources=True)
     yield ctx
 
-    trace_path = test_root / "trace.zip"
+    trace_path = test_root / TRACE_FILE_NAME
     try:
-        ctx.tracing.stop(path=str(trace_path))
+        ctx.tracing.stop(path=trace_path)
     finally:
         ctx.close()
 

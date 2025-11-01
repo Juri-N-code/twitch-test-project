@@ -1,5 +1,7 @@
-from playwright.sync_api import Page
 import logging
+
+from playwright.sync_api import Page
+
 from locators.popups_locators import PopupsLocators
 
 logger = logging.getLogger(__name__)
@@ -30,8 +32,6 @@ class Popups:
                 logger.error(f"Failed to dismiss popup {selector}: {e}")
 
         # Fallback: press Escape 
-        try:
-            self.page.keyboard.press("Escape")
-            logger.info("Pressed Escape to dismiss any remaining popups")
-        except Exception:
-            pass
+
+        self.page.keyboard.press("Escape")
+        logger.info("Pressed Escape to dismiss any remaining popups")

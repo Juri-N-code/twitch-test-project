@@ -1,5 +1,7 @@
-from pages.base_page import BasePage
+from typing import Self
+
 from locators.streamer_locators import StreamerLocators
+from pages import BasePage
 
 
 class StreamerPage(BasePage):
@@ -7,7 +9,7 @@ class StreamerPage(BasePage):
 
     _VIDEO_SELECTOR = StreamerLocators.VIDEO
 
-    def wait_for_video(self) -> "StreamerPage":
+    def wait_for_video(self) -> Self:
         """
         Wait until the streamer page is fully loaded.
         Checks for video element readiness or fallback persistent player.

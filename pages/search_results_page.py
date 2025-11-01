@@ -1,6 +1,6 @@
-from pages.streamer_page import StreamerPage
-from pages.base_page import BasePage
 from locators.search_results_locators import SearchResultsLocators
+from pages import BasePage
+from pages.streamer_page import StreamerPage
 
 
 class SearchResultsPage(BasePage):
@@ -10,7 +10,7 @@ class SearchResultsPage(BasePage):
 
     _LIVE_BUTTON = SearchResultsLocators.LIVE_BUTTON
 
-    def select_first_streamer(self) -> "StreamerPage":
+    def select_first_streamer(self) -> StreamerPage:
         """
         elect the first 'Live' streamer
         """

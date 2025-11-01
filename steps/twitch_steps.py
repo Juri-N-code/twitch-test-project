@@ -1,16 +1,18 @@
 from pathlib import Path
+
 from playwright.sync_api import Page
 
 from pages.home_page import HomePage
+from pages.popups import Popups
 from pages.search_results_page import SearchResultsPage
 from pages.streamer_page import StreamerPage
-from pages.popups import Popups
 from utils.page_actions import PageActions
 from utils.steps_decorator import step
 
 """
 Steps for reuse in tests
 """
+
 
 @step("Open Twitch homepage")
 def open_home(page: Page, base_url: str) -> HomePage:

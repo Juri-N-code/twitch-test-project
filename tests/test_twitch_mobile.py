@@ -1,7 +1,8 @@
-import pytest
 from pathlib import Path
+
+import pytest
 from playwright.sync_api import Page
-from utils.data_loader import load_json
+
 from steps.twitch_steps import (
     open_home,
     dismiss_popups,
@@ -13,6 +14,7 @@ from steps.twitch_steps import (
     wait_video_ready,
     take_final_screenshot,
 )
+from utils.data_loader import load_json
 
 
 @pytest.mark.e2e

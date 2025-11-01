@@ -1,9 +1,12 @@
-from pathlib import Path
-from playwright.sync_api import Page
-from config import settings
 import logging
+from pathlib import Path
+
+from playwright.sync_api import Page
+
+from config import settings
 
 logger = logging.getLogger(__name__)
+
 
 class PageActions:
     """
@@ -30,5 +33,5 @@ class PageActions:
         out_path = Path(settings.SCREENSHOTS_DIR)
         out_path.mkdir(parents=True, exist_ok=True)
         file_path = out_path / name
-        self.page.screenshot(path=str(file_path), full_page=False)
+        self.page.screenshot(path=file_path, full_page=False)
         return file_path

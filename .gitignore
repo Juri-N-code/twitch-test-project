@@ -4,9 +4,7 @@ test-results/
 *.png
 *.webm
 *.zip
-*.trace.zip
 *.log
 *.DS_Store
-venv/
 .venv/
 
