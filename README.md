@@ -3,7 +3,6 @@
 This is a test assignment demonstrating an end-to-end mobile user flow on Twitch using Python, Playwright, and Pytest. 
 The test searches for a Starcraft streamer, opens live video and captures a screenshot. 
 The project follows the Page Object Model (POM), stores run artifacts (traces and screenshots). 
-Includes a custom @step decorator for structured logging and optional Allure integration.
 
 **TODO:** Improve configu ration management to support multiple browsers and devices,
 for instance with command line parameters (pytest --browser=firefox --device="iPhone 12"),
