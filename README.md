@@ -45,7 +45,6 @@ making easier cross-browser/device testing.
 
 ### Requirements
 - Python 3.10+
-- Google Chrome
 - Playwright 1.48.x
 
 ---
